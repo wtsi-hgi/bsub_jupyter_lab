@@ -1,7 +1,7 @@
-# bsub_jupyter_lab
+## bsub_jupyter_lab
 start jupyter lab (python and R) server on LSF farm5 node via bsub
 
-### instructions
+#### instructions
 clone repo and run start script with arguments:
 ```
 git clone https://github.com/wtsi-hgi/bsub_jupyter_lab.git && cd bsub_jupyter_lab
