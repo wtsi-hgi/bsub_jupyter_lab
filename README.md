@@ -2,7 +2,7 @@
 start jupyter lab (python and R) server on LSF farm5 node via bsub
 
 #### instructions
-ssh on farm5, clone repo and run start script with arguments:
+ssh on farm5, clone repo and run start script with arguments:  
 !This requires conda to be activated, see instructions below if not done already!
 ```
 git clone https://github.com/wtsi-hgi/bsub_jupyter_lab.git && cd bsub_jupyter_lab
