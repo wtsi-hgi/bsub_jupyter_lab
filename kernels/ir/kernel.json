@@ -1,5 +1,5 @@
 {
-  "argv": ["/lustre/scratch118/humgen/resources/conda_envs/jupyterhub/lib/R/bin/R", "--slave", "-e", ".libPaths('/lustre/scratch118/humgen/resources/rstudio_server_libs');IRkernel::main()", "--args", "{connection_file}"],
-  "display_name": "Rconda",
+  "argv": ["/software/hgi/installs/anaconda3/envs/nextflow20/lib/R/bin/R", "--slave", "-e", ".libPaths('/lustre/scratch118/humgen/resources/rstudio_server_libs');IRkernel::main()", "--args", "{connection_file}"],
+  "display_name": "R",
   "language": "R"
 }
