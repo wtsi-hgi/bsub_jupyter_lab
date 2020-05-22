@@ -11,7 +11,7 @@ bsub_jupyter_lab.sh -g hgi -c 4 -m 50000 -q normal
 * `-g` is your LSF group
 * `-c` is the number of CPUs requested
 * `-m` is the memory requested (50000 means 50G)
-* `-q` is the lSF queue
+* `-q` is the LSF queue
 
 The address:port and token of the server will be given in file `jupyter_lab.log` (generated in current directory).
 
