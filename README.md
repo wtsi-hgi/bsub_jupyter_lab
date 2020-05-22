@@ -16,7 +16,7 @@ bsub_jupyter_lab.sh -g hgi -c 4 -m 50000 -q normal
 The address:port and token of the server will be given in file `jupyter_lab.log` (generated in current directory).
 
 #### R libraries
-You can add your own R installed packages (must be compatible with R3.6) in the R notebook:
+You can add your own R installed packages (must be compatible with R 3.6) in the R notebook:
 ```
 .libPaths(/lustre/path_to_installed_packages)
 library(your_package_name)
