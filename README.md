@@ -2,7 +2,8 @@
 start jupyter lab (python and R) server on LSF farm5 node via bsub
 
 #### instructions
-clone repo and run start script with arguments:
+ssh on farm5, clone repo and run start script with arguments:
+!This requires conda to be activated, see instructions below if not done already!
 ```
 git clone https://github.com/wtsi-hgi/bsub_jupyter_lab.git && cd bsub_jupyter_lab
 ./bsub_jupyter_lab.sh -g hgi -c 4 -m 50000 -q normal
@@ -20,4 +21,12 @@ You can add your own R installed packages (must be compatible with R 3.6) in the
 ```
 .libPaths(/lustre/path_to_installed_packages)
 library(your_package_name)
+```
+
+#### activate hgi conda on farm5
+```
+ssh farm5-login
+vvi@farm5-head2:~$ /software/hgi/installs/anaconda3/bin/conda init bash
+<now you must log out and into farm5 again>
+(base) vvi@farm5-head2:~$ conda activate hgi_base
 ```
