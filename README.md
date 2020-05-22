@@ -15,6 +15,11 @@ git clone https://github.com/wtsi-hgi/bsub_jupyter_lab.git && cd bsub_jupyter_la
 * `-q` is the LSF queue
 
 The address:port and token of the server will be given in file `jupyter_lab.log` (generated in current directory).
+That is, wait until you see a line like the following in `jupyter_lab.log` , and paste address in your browser:
+```
+    Or copy and paste one of these URLs:
+        http://node-10-4-1:53074/?token=ea9bba78eb0840154b45acfc90dc9395e66c8d6fbcb2d4be
+```
 
 #### R libraries
 You can add your own R installed packages (must be compatible with R 3.6) in the R notebook:
