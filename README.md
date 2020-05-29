@@ -22,7 +22,8 @@ That is, wait until you see a line like the following in `jupyter_lab.log` , and
 ```
 
 #### R libraries
-You can add your own R installed packages (must be compatible with R 3.6) in the R notebook:
+2 R versions are currently available in the notebook: R 3.6.1 and R 4.0.0 .  
+You can add your own R installed packages (must be compatible with either R 3.6.1 or R 4.0.0) in an R notebook:
 ```
 .libPaths(/lustre/path_to_installed_packages)
 library(your_package_name)
