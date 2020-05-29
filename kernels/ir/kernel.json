@@ -1,5 +1,5 @@
 {
   "argv": ["/software/hgi/installs/anaconda3/envs/nextflow20/lib/R/bin/R", "--slave", "-e", ".libPaths('/lustre/scratch118/humgen/resources/rstudio_server_libs');IRkernel::main()", "--args", "{connection_file}"],
-  "display_name": "R",
+  "display_name": "R 3.6",
   "language": "R"
 }
