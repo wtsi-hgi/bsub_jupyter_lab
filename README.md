@@ -29,6 +29,19 @@ You can add your own R installed packages (must be compatible with either R 3.6.
 library(your_package_name)
 ```
 
+#### python libraries
+In Jupyter, you can open a terminal and try install packages with a `--target` directory,  e.g.  
+    `pip install pandas --target /lustre/path_to_new_pip_libraries`
+and then in a python notebook:
+```
+    import sys
+    sys.path.append('/lustre/path_to_new_pip_libraries')
+    import pandas
+```
+
+If that doesn’t work for your packages, contact HGI. you could clone the whole jupyter conda environment, reference the new one in the start script, and then you will be free to use any conda and pip command yourself.
+ 
+
 #### activate hgi conda on farm5
 ```
 ssh farm5-login
