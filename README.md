@@ -31,7 +31,7 @@ library(your_package_name)
 
 #### python libraries
 In Jupyter, you can open a terminal and try install packages with a `--target` directory,  e.g.  
-    `pip install pandas --target /lustre/path_to_new_pip_libraries`
+    `pip install pandas --target /lustre/path_to_new_pip_libraries`  
 and then in a python notebook:
 ```
     import sys
