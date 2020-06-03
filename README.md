@@ -42,7 +42,7 @@ and then in a python notebook:
     import pandas
 ```
 
-If that doesn’t work for your package, contact HGI. you could clone the whole jupyter conda environment, reference the new one in the start script, and then you will be free to use any conda and pip command yourself.
+If that doesn’t work for your package, contact HGI: you could clone the whole jupyter conda environment, reference the new one in the start script,so that you can use any conda/pip command.
  
 
 #### activate hgi conda on farm5
