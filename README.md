@@ -21,7 +21,7 @@ That is, wait until you see a line like the following in `jupyter_lab.log` , and
         http://node-10-4-1:53074/?token=ea9bba78eb0840154b45acfc90dc9395e66c8d6fbcb2d4be
 ```
 
-If you are working remotely, you need to be connected via VPN (contact ServiceDesk) to access the node, or use ssh tunneling. With the latter, try manually replacing `[node].sanger.ac.uk` with `[node].internal.sanger.ac.uk` .
+If you are working remotely, you need to be connected via VPN or use ssh tunneling to access the node from your web browser. With the latter, try manually replacing `[node].sanger.ac.uk` with `[node].internal.sanger.ac.uk` in the address.
 
 
 #### R libraries
