@@ -21,16 +21,19 @@ That is, wait until you see a line like the following in `jupyter_lab.log` , and
         http://node-10-4-1:53074/?token=ea9bba78eb0840154b45acfc90dc9395e66c8d6fbcb2d4be
 ```
 
+If you are working remotely, you need to be connected via VPN (contact ServiceDesk) to access the node, or use ssh tunneling. With the latter, try manually replacing `[node].sanger.ac.uk` with `[node].internal.sanger.ac.uk` .
+
+
 #### R libraries
 2 R versions are currently available in the notebook: R 3.6.1 and R 4.0.0 .  
-You can add your own R installed packages (must be compatible with either R 3.6.1 or R 4.0.0) in an R notebook:
+You can add your own R installed libraries (must be compatible with either R 3.6.1 or R 4.0.0) in an R notebook:
 ```
-.libPaths(/lustre/path_to_installed_packages)
-library(your_package_name)
+.libPaths(/lustre/path_to_installed_libraries)
+library(your_library_name)
 ```
 
 #### python libraries
-In Jupyter, you can open a terminal and try install packages with a `--target` directory,  e.g.  
+In Jupyter, you can open a terminal and try install packages with a `--target` directory,  e.g.    
     `pip install pandas --target /lustre/path_to_new_pip_libraries`  
 and then in a python notebook:
 ```
@@ -39,7 +42,7 @@ and then in a python notebook:
     import pandas
 ```
 
-If that doesn’t work for your packages, contact HGI. you could clone the whole jupyter conda environment, reference the new one in the start script, and then you will be free to use any conda and pip command yourself.
+If that doesn’t work for your package, contact HGI. you could clone the whole jupyter conda environment, reference the new one in the start script, and then you will be free to use any conda and pip command yourself.
  
 
 #### activate hgi conda on farm5
@@ -47,5 +50,5 @@ If that doesn’t work for your packages, contact HGI. you could clone the whole
 ssh farm5-login
 vvi@farm5-head2:~$ /software/hgi/installs/anaconda3/bin/conda init bash
 <now you must log out and into farm5 again>
-(base) vvi@farm5-head2:~$ conda activate hgi_base
+vvi@farm5-head2:~$ conda activate hgi_base
 ```
