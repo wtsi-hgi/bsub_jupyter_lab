@@ -1,5 +1,5 @@
 ## bsub_jupyter_lab
-start jupyter lab (python and R) server on LSF farm5 node via bsub
+start jupyter lab (python and R) server on LSF farm5 node via bsub.
 
 #### instructions
 ssh on farm5, clone repo and run start script with arguments:  
@@ -51,6 +51,6 @@ If that doesn’t work for your package, contact HGI: you could clone the whole 
 ssh farm5-login
 gn5@farm5-head2:~$ /software/hgi/installs/anaconda3/bin/conda init bash
 <now you must log out and into farm5 again>
-<and check that conda activate works:>
+<check that conda activate works:>
 gn5@farm5-head2:~$ conda activate hgi_base
 ```
