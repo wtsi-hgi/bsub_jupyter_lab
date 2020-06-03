@@ -22,7 +22,7 @@ That is, wait until you see a line like the following in `jupyter_lab.log` , and
 ```
 
 If you are working remotely, you need to be connected via VPN or use ssh tunneling to access the node from your web browser. With the latter, you need to :  
- - manually replace `[node].sanger.ac.uk` with `[node].internal.sanger.ac.uk` in the address.  
+ - manually replace `[node]` with `[node].internal.sanger.ac.uk` in the address, that is for the example above: `http://node-10-4-1.internal.sanger.ac.uk:53074/?token=ea9bba78eb0840154b45acfc90dc9395e66c8d6fbcb2d4be`   
  - forward the port of the host that is running Jupyter Lab on to a port on your local machine. For the example above, open a new terminal session and do `ssh -L 53074:node-10-4-1.internal.sanger.ac.uk:53074 your_sanger_sername@ssh.sanger.ac.uk`, which forwards port 53074 on node-10-4-1 to port 53074 on your localhost, jumping through the SSH gateway.
 
 #### R libraries
