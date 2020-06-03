@@ -3,7 +3,7 @@ start jupyter lab (python and R) server on LSF farm5 node via bsub.
 
 #### instructions
 ssh on farm5, clone repo and run start script with arguments:  
-!This requires conda to be activated, see instructions below if not done already!
+! This requires conda to be activated, see instructions below if not done already !
 ```
 git clone https://github.com/wtsi-hgi/bsub_jupyter_lab.git && cd bsub_jupyter_lab
 ./bsub_jupyter_lab.sh -g hgi -c 4 -m 50000 -q normal
@@ -14,7 +14,7 @@ git clone https://github.com/wtsi-hgi/bsub_jupyter_lab.git && cd bsub_jupyter_la
 * `-m` is the memory requested (50000 means 50G)
 * `-q` is the LSF queue
 
-The address:port and token of the server will be given in file `jupyter_lab.log` (generated in current directory).
+The address:port and token of the server will be given in file `jupyter_lab.log` (created in current directory).
 That is, wait until you see a line like the following in `jupyter_lab.log` , and paste address in your browser:
 ```
     Or copy and paste one of these URLs:
@@ -27,7 +27,7 @@ If you are working remotely, you need to be connected via VPN or use [SSH tunnel
 
 #### R libraries
 2 R versions are currently available in the notebook: R 3.6.1 and R 4.0.0 .  
-You can add your own R installed libraries (must be compatible with either R 3.6.1 or R 4.0.0) in an R notebook:
+You can add your own installed libraries (must be compatible with either R 3.6.1 or R 4.0.0) in an R notebook:
 ```
 .libPaths(/lustre/path_to_installed_libraries)
 library(your_library_name)
