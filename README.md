@@ -49,7 +49,8 @@ If that doesn’t work for your package, contact HGI: you could clone the whole 
 #### activate hgi conda on farm5
 ```
 ssh farm5-login
-vvi@farm5-head2:~$ /software/hgi/installs/anaconda3/bin/conda init bash
+gn5@farm5-head2:~$ /software/hgi/installs/anaconda3/bin/conda init bash
 <now you must log out and into farm5 again>
-vvi@farm5-head2:~$ conda activate hgi_base
+<and check that conda activate works:>
+gn5@farm5-head2:~$ conda activate hgi_base
 ```
