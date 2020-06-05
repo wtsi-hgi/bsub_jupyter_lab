@@ -28,3 +28,6 @@ echo jupyter config paths are:
 jupyter --paths
 echo starting jupyter lab server...
 jupyter lab --port=$PORT --ip=0.0.0.0 >> jupyter_lab.log 2>&1
+
+HOST_NAME=$(hostname)
+echo Tunnelling SSH command: ssh -L $PORT:$HOST_NAME.internal.sanger.ac.uk:$PORT ${USER}@ssh.sanger.ac.uk
