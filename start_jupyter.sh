@@ -4,7 +4,7 @@
 notebookdir=$PWD
 condaenv=/software/hgi/installs/anaconda3/envs/nextflow20
 
-while getopts 'd:' OPTION; do
+while getopts 'd:e:' OPTION; do
   case "$OPTION" in
     d)
       notebookdir="$OPTARG"
