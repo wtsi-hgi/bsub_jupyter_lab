@@ -15,8 +15,8 @@ git clone https://github.com/wtsi-hgi/bsub_jupyter_lab.git && cd bsub_jupyter_la
 * `-q` is the LSF queue
   
 there are also 2 optional argument
-* `-d` path_to_notebook_dir (to set notebook's browser directory)
-* `-e` path_to_conda_env (to use your own jupyter lab conda env)
+* `-d` /lustre/path_to_notebook_dir (to set notebook's browser directory)
+* `-e` /lustre/path_to_conda_env (to use your own jupyter lab conda env, see instructions below to create)
 
 The address:port and token of the server will be given in file `jupyter_lab.log` (created in current directory).
 That is, wait until you see a line like the following in `jupyter_lab.log` , and paste address in your browser:
@@ -50,11 +50,12 @@ and then in a python notebook:
 If that doesn’t work for your package because of conda conflicts see paragraph below.
 
 # jupyterlab conda env
-You can also use your own conda environment, so that you can alter all conda/pip packages yourself.
-Create a new new minimal environment with:
+You can also use your own conda environment, so that you can install any conda/pip/R packages yourself.
+Create a new new minimal environment with: (`or use minimal_conda_env.txt`)
 ```
 conda create --prefix /lustre/path_to_your_new_env/jupyterlab_env -c conda-forge jupyterlab
 ```
+and use optional argument `-e` (see above) with `./bsub_jupyter_lab.sh` to reference it.
 
 #### activate hgi conda on farm5
 ```
