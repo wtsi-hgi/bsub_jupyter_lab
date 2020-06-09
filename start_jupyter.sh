@@ -1,4 +1,16 @@
 #!/usr/bin/env bash
+
+notebookdir=$PWD
+while getopts 'd:' OPTION; do
+  case "$OPTION" in
+    d)
+      notebookdir="$OPTARG"
+      echo "notebookd dir will be $notebookdir"
+      ;; 
+  esac
+done
+shift "$(($OPTIND -1))"
+
 echo LSF job started...
 
 # load jupyterhub conda env that has jupyterhub installed
@@ -29,4 +41,4 @@ jupyter --paths
 echo starting jupyter lab server...
 HOST_NAME=$(hostname)
 echo Tunnelling SSH command: ssh -L $PORT:$HOST_NAME.internal.sanger.ac.uk:$PORT ${USER}@ssh.sanger.ac.uk >> jupyter_lab.log
-jupyter lab --port=$PORT --ip=0.0.0.0 >> jupyter_lab.log 2>&1
+jupyter lab --notebook-dir=$notebookdir --port=$PORT --ip=0.0.0.0 >> jupyter_lab.log 2>&1
