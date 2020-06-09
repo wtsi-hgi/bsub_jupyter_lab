@@ -1,4 +1,4 @@
-## bsub_jupyter_lab
+## bsub jupyter lab
 start jupyter lab (python and R) server on LSF farm5 node via bsub.
 
 #### instructions
