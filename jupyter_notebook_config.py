@@ -1,5 +1,7 @@
 # Configuration file for jupyter-notebook.
 c.NotebookApp.open_browser = False
+## The directory to use for notebooks and kernels.
+#c.NotebookApp.notebook_dir = ''
 
 #------------------------------------------------------------------------------
 # Application(SingletonConfigurable) configuration
