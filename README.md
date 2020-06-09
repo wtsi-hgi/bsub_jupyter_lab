@@ -46,8 +46,14 @@ and then in a python notebook:
     import pandas
 ```
 
-If that doesn’t work for your package because of conda conflicts, contact HGI: you could clone the complete jupyter conda environment and reference the new one in the start script, so that you can alter all conda/pip packages yourself.
- 
+If that doesn’t work for your package because of conda conflicts see paragraph below.
+
+# jupyterlab conda env
+You can also use your own conda environment, so that you can alter all conda/pip packages yourself.
+Create a new new minimal environment with:
+```
+conda create --prefix /lustre/path_to_your_new_env/jupyterlab_env -c conda-forge jupyterlab
+```
 
 #### activate hgi conda on farm5
 ```
