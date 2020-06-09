@@ -14,7 +14,7 @@ git clone https://github.com/wtsi-hgi/bsub_jupyter_lab.git && cd bsub_jupyter_la
 * `-m` is the memory requested (50000 means 50G)
 * `-q` is the LSF queue
   
-there are also 2 optional argument
+there are also 2 optional arguments
 * `-d` /lustre/path_to_notebook_dir (to set notebook's browser directory)
 * `-e` /lustre/path_to_conda_env (to use your own jupyter lab conda env, see instructions below to create)
 
