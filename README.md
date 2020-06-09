@@ -49,7 +49,7 @@ and then in a python notebook:
 
 If that doesn’t work for your package because of conda conflicts see paragraph below.
 
-# jupyterlab conda env
+#### jupyterlab conda env
 You can also use your own conda environment, so that you can install any conda/pip/R packages yourself.
 Create a new new minimal environment with: (`or use minimal_conda_env.txt`)
 ```
