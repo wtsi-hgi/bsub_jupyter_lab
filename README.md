@@ -50,7 +50,7 @@ and then in a python notebook:
 If that doesn’t work for your package because of conda conflicts, see paragraph below.
 
 #### jupyterlab conda env
-You can also use your own conda environment, so that you can install any conda/pip/R packages yourself.
+You can also use your own conda environment, so that you can install any conda/pip/R packages directly in the environment.
 Create a new new minimal environment with (or use `minimal_conda_env.txt`) :
 ```
 conda create --prefix /lustre/path_to_your_new_env/jupyterlab_env -c conda-forge jupyterlab
