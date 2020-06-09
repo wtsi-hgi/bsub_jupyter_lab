@@ -5,7 +5,7 @@ while getopts 'd:' OPTION; do
   case "$OPTION" in
     d)
       notebookdir="$OPTARG"
-      echo "notebookd dir will be $notebookdir"
+      echo "notebook dir will be $notebookdir"
       ;; 
   esac
 done
