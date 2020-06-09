@@ -13,6 +13,9 @@ git clone https://github.com/wtsi-hgi/bsub_jupyter_lab.git && cd bsub_jupyter_la
 * `-c` is the number of CPUs requested
 * `-m` is the memory requested (50000 means 50G)
 * `-q` is the LSF queue
+  
+there is an additional optional argument to set notebook's browser directory:
+* `-d` path_to_notebook_dir
 
 The address:port and token of the server will be given in file `jupyter_lab.log` (created in current directory).
 That is, wait until you see a line like the following in `jupyter_lab.log` , and paste address in your browser:
