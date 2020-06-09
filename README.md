@@ -47,7 +47,7 @@ and then in a python notebook:
     import pandas
 ```
 
-If that doesn’t work for your package because of conda conflicts see paragraph below.
+If that doesn’t work for your package because of conda conflicts, see paragraph below.
 
 #### jupyterlab conda env
 You can also use your own conda environment, so that you can install any conda/pip/R packages yourself.
