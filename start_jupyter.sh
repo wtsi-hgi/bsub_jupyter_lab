@@ -1,11 +1,18 @@
 #!/usr/bin/env bash
 
+# defaults
 notebookdir=$PWD
+condaenv=/software/hgi/installs/anaconda3/envs/nextflow20
+
 while getopts 'd:' OPTION; do
   case "$OPTION" in
     d)
       notebookdir="$OPTARG"
       echo "notebook dir will be $notebookdir"
+      ;; 
+    e)
+      condaenv="$OPTARG"
+      echo "jupyter lab conda env is $condaenv"
       ;; 
   esac
 done
@@ -15,10 +22,8 @@ echo LSF job started...
 
 # load jupyterhub conda env that has jupyterhub installed
 echo activating jupyterhub conda environment...
-export CONDA_ENVS_DIRS=/software/hgi/installs/anaconda3/envs
-export CONDA_PKGS_DIRS=/software/hgi/installs/anaconda3/pkgs
 eval "$(conda shell.bash hook)"
-conda activate nextflow20 #/lustre/scratch118/humgen/resources/conda_envs/jupyterhub
+conda activate $condaenv
 
 # get free port for jupyterhub
 echo get free port on host...
