@@ -51,11 +51,11 @@ If that doesn’t work for your package because of conda conflicts see paragraph
 
 #### jupyterlab conda env
 You can also use your own conda environment, so that you can install any conda/pip/R packages yourself.
-Create a new new minimal environment with: (`or use minimal_conda_env.txt`)
+Create a new new minimal environment with (or use `minimal_conda_env.txt`) :
 ```
 conda create --prefix /lustre/path_to_your_new_env/jupyterlab_env -c conda-forge jupyterlab
 ```
-and use optional argument `-e` (see above) with `./bsub_jupyter_lab.sh` to reference it.
+and use optional argument `-e`of script `./bsub_jupyter_lab.sh` to reference it.
 
 #### activate hgi conda on farm5
 ```
