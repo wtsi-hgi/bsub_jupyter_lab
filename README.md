@@ -71,7 +71,7 @@ library(anocva)
 # check that local_libs directory indeeed has `purrr` and `anocva` dirs:
 list.files(local_libs)
 
-# in future sessions, don't forget to use .libPaths(local_libs) before loading these libraries.
+# in future sessions, don't forget to run .libPaths(local_libs) so that R can load these libraries.
 ```
 
 #### python libraries
