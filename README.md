@@ -28,7 +28,7 @@ That is, wait until you see a line like the following in `jupyter_lab.log` , and
 If you are working remotely, you need to be connected via VPN or use [SSH tunneling through the web proxy](https://ssg-confluence.internal.sanger.ac.uk/display/FARM/All+things+SSH#AllthingsSSH-TunnelingthroughtheSSHgateway) to access the node from your web browser.   
 With the latter, you need to forward the port of the host that is running Jupyter Lab on to a port on your local machine.
 To do so, in a terminal, run the Tunnelling SSH command that you will find in log file `jupyter_lab.log` 
-(for the example above, that would be. 
+(for the example above, that would be 
 `ssh -L 53074:node-10-4-1 .internal.sanger.ac.uk:53074 your_sanger_username@ssh.sanger.ac.uk`,  
 which forwards port 53074 on node-10-4-1 to port 53074 on your localhost, jumping through the SSH gateway.)
 Then you can point your browser to address `127.0.0.1`:  
