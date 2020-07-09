@@ -58,12 +58,18 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager", lib=local_libs)
 BiocManager::install(libs=local_libs)
 
-# now R is ready to install packages in local_libs,
+# now R is ready to install packages in local_libs
 # example install of a package in local_libs directory via Bioconductor:
-BiocManager::install('dplyr', lib=local_libs)
+BiocManager::install('purrr', lib=local_libs)
 
 # example install of a package in local_libs directory without Bioconductor:
 install.packages("anocva", lib=local_libs)
+
+# test that libraries are there and loaded corretly
+library(purrr)
+library(anocva)
+# check that local_libs directory indeeed has `purrr` and `anocva` dirs:
+list.files(local_libs)
 ```
 
 #### python libraries
