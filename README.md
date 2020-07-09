@@ -56,7 +56,7 @@ dir.create(local_libs, showWarnings = FALSE)
 # Install BiocManager if not done already:
 if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager", lib=local_libs)
-BiocManager::install(libs=local_libs)
+BiocManager::install(lib=local_libs)
 
 # now R is ready to install packages in local_libs
 # example install of a package in local_libs directory via Bioconductor:
