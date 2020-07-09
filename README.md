@@ -65,11 +65,13 @@ BiocManager::install('purrr', lib=local_libs)
 # example install of a package in local_libs directory without Bioconductor:
 install.packages("anocva", lib=local_libs)
 
-# test that libraries are there and loaded corretly
+# test that libraries are there and loaded correctly
 library(purrr)
 library(anocva)
 # check that local_libs directory indeeed has `purrr` and `anocva` dirs:
 list.files(local_libs)
+
+# in future sessions, don't forget to use .libPaths(local_libs) before loading these libraries.
 ```
 
 #### python libraries
