@@ -31,7 +31,7 @@ To do so, in a terminal, run the Tunnelling SSH command that you will find in lo
 (for the example above, that would be 
 `ssh -L 53074:node-10-4-1.internal.sanger.ac.uk:53074 your_sanger_username@ssh.sanger.ac.uk`,  
 which forwards port 53074 on node-10-4-1 to port 53074 on your localhost, jumping through the SSH gateway.)
-Then you can point your browser to address `127.0.0.1`:  
+Then you can point your browser to address `127.0.0.1` (which will also be shown in `jupyter_lab.log`) :  
 `http://127.0.0.1:53074/?token=ea9bba78eb0840154b45acfc90dc9395e66c8d6fbcb2d4be`
 
 #### R libraries
