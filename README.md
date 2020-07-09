@@ -43,6 +43,29 @@ You can add your own installed libraries (must be compatible with either R 3.6.1
 library(your_library_name)
 ```
 
+##### How to install your own libraries in your project or home dir
+
+```
+# set local/personal libs directory, e.g.:
+local_libs = '/nfs/users/nfs_g/gn5/personal_rlibs' # set to your project or home dir
+
+# create directory if doesn't exist already:
+dir.create(local_libs, showWarnings = FALSE)
+# tell R to use this libs directory
+.libPaths(local_libs)
+# Install BiocManager if not done already:
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager", lib=local_libs)
+BiocManager::install(libs=local_libs)
+
+# now R is ready to install packages in local_libs,
+# example install of a package in local_libs directory via Bioconductor:
+BiocManager::install('dplyr', lib=local_libs)
+
+# example install of a package in local_libs directory without Bioconductor:
+install.packages("anocva", lib=local_libs)
+```
+
 #### python libraries
 In Jupyter, you can open a terminal and try install packages with a `--target` directory,  e.g.    
     `pip install pandas --target /lustre/path_to_new_pip_libraries`  
