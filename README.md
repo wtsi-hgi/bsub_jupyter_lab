@@ -4,10 +4,10 @@ This page has several sections:
 - [How to start jupyter lab](#instructions)
 - [How to use your own R libraries](#R-libraries)
 - [How to install your own libraries in your project or home dir](#How-to-install-your-own-libraries-in-your-project-or-home-dir)
-- [HOw to use your own python libraries](#python-libraries)
-- [HOw to set up a personal jupyter lab conda environment](#jupyterlab-conda-env)
+- [How to use your own python libraries](#python-libraries)
+- [How to set up a personal jupyter lab conda environment](#jupyterlab-conda-env)
 - [How to copy data to/from personal computer to Sanger /lustre without VPN](#How-to-copy-data-to-or-from-personal-computer-to-Sanger-lustre-without-VPN)
-- [HOw to activate hgi conda on farm5](#activate-hgi-conda-on-farm5)
+- [How to activate hgi conda on farm5](#activate-hgi-conda-on-farm5)
 
 #### instructions
 ssh on farm5, clone repo and run start script with arguments:  
