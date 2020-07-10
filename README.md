@@ -11,7 +11,7 @@ This page has several sections:
 
 #### instructions
 ssh on farm5, clone repo and run start script with arguments:  
-! This requires conda to be activated, see instructions below if not done already !
+! This requires conda to be activated, see [instructions below](#activate-hgi-conda-on-farm5) if not done already !
 ```
 git clone https://github.com/wtsi-hgi/bsub_jupyter_lab.git && cd bsub_jupyter_lab
 ./bsub_jupyter_lab.sh -g hgi -c 4 -m 50000 -q normal
