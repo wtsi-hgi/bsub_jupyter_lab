@@ -1,5 +1,5 @@
 ## bsub jupyter lab
-start jupyter lab (python and R) server on LSF farm5 node via bsub.  
+start jupyter lab (python and R) server on LSF farm5 node, i.e. with access to /lustre, via bsub.  
 This page has several sections:  
 - [How to start jupyter lab](#instructions)
 - [How to use your own R libraries](#R-libraries)
