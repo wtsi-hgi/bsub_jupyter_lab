@@ -91,6 +91,7 @@ and then in a python notebook:
     sys.path.append('/lustre/path_to_new_pip_libraries')
     import pandas
 ```
+If that gives conflict errors with the packages already installed, you can set a you own jupyterlab/python conda environement, see [instructions below](#jupyterlab-conda-env).
 
 #### How to copy data to or from personal computer to Sanger lustre without VPN
 This, and all SSH related issues, are documented at https://ssg-confluence.internal.sanger.ac.uk/display/FARM/All+things+SSH .   
