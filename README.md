@@ -84,7 +84,19 @@ and then in a python notebook:
     import pandas
 ```
 
-If that doesn’t work for your package because of conda conflicts, see paragraph below.
+#### How to copy data to/from personal computer to Sanger /lustre without VPN
+This, and all SSH related issues, are documented at https://ssg-confluence.internal.sanger.ac.uk/display/FARM/All+things+SSH
+In short, you can use `rsync` :  
+In a terminal, run:
+```
+ssh -L2222:farm5-login.internal.sanger.ac.uk:22 your_username@ssh.sanger.ac.uk 
+```
+where `your_username` is your Sanger username. 
+It should ask for your Sanger ssh password and ask where you want to go (enter `farm5-login`). 
+Once connected, keep that terminal open, and in a new one run the `rsync` command:
+```
+rsync -rvz -e 'ssh -p 2222' --progress local_file_to_copy localhost:/lustre/path_where_you_want_the_files_to_go/
+```
 
 #### jupyterlab conda env
 You can also use your own conda environment, so that you can install any conda/pip/R packages directly in the environment.
