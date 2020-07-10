@@ -103,7 +103,7 @@ where `your_username` is your Sanger username.
 It should ask for your Sanger ssh password and ask where you want to go (enter `farm5-login`). 
 Once connected, keep that terminal open, and in a new one run the `rsync` command to copy your files:
 ```
-rsync -rvz -e 'ssh -p 2222' --progress local_file_to_copy localhost:/lustre/path_where_you_want_the_files_to_go/
+rsync -rvz -e 'ssh -p 2222' --progress local_file_to_copy your_username@localhost:/lustre/path_where_you_want_the_files_to_go/
 ```
 
 #### jupyterlab conda env
