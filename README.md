@@ -6,7 +6,7 @@ This page has several sections:
 - [How to install your own libraries in your project or home dir](#How-to-install-your-own-libraries-in-your-project-or-home-dir)
 - [python libraries](#python-libraries)
 - [jupyterlab conda env](#jupyterlab-conda-env)
-- [How to copy data to/from personal computer to Sanger /lustre without VPN](#How-to-copy-data-to/from-personal-computer-to-Sanger-/lustre-without-VPN)
+- [How to copy data to/from personal computer to Sanger /lustre without VPN](#How-to-copy-data-to-or-from-personal-computer-to-Sanger-lustre-without-VPN)
 - [activate hgi conda on farm5](#activate-hgi-conda-on-farm5)
 
 #### instructions
@@ -92,7 +92,7 @@ and then in a python notebook:
     import pandas
 ```
 
-#### How to copy data to/from personal computer to Sanger /lustre without VPN
+#### How to copy data to or from personal computer to Sanger lustre without VPN
 This, and all SSH related issues, are documented at https://ssg-confluence.internal.sanger.ac.uk/display/FARM/All+things+SSH .   
 In short, you can use `rsync`.  
 First, in a terminal, run:
