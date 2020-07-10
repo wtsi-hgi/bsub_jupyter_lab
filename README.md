@@ -17,7 +17,7 @@ git clone https://github.com/wtsi-hgi/bsub_jupyter_lab.git && cd bsub_jupyter_la
 ./bsub_jupyter_lab.sh -g hgi -c 4 -m 50000 -q normal
 ```
 
-* `-g` is **your LSF group** (not `hgi`)
+* `-g` is **your LSF group** (not *hgi*)
 * `-c` is the number of CPUs requested
 * `-m` is the memory requested (50000 means 50G)
 * `-q` is the LSF queue
