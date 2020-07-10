@@ -1,5 +1,7 @@
 ## bsub jupyter lab
 start jupyter lab (python and R) server on LSF farm5 node via bsub.
+This page has several sections
+[instructions](#instructions)
 
 #### instructions
 ssh on farm5, clone repo and run start script with arguments:  
