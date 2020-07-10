@@ -1,7 +1,12 @@
 ## bsub jupyter lab
 start jupyter lab (python and R) server on LSF farm5 node via bsub.  
 This page has several sections:  
-[instructions](#instructions). 
+- [instructions](#instructions)
+- [R libraries](#R-libraries)
+- [How to install your own libraries in your project or home dir](#How-to-install-your-own-libraries-in-your-project-or-home-dir)
+- [python libraries](#python-libraries)
+- [jupyterlab conda env](#jupyterlab-conda-env)
+- [activate hgi conda on farm5](#activate-hgi-conda-on-farm5)
 
 #### instructions
 ssh on farm5, clone repo and run start script with arguments:  
