@@ -85,7 +85,7 @@ and then in a python notebook:
 ```
 
 #### How to copy data to/from personal computer to Sanger /lustre without VPN
-This, and all SSH related issues, are documented at https://ssg-confluence.internal.sanger.ac.uk/display/FARM/All+things+SSH
+This, and all SSH related issues, are documented at https://ssg-confluence.internal.sanger.ac.uk/display/FARM/All+things+SSH .   
 In short, you can use `rsync`.  
 In a terminal, run:
 ```
