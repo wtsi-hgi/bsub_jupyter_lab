@@ -109,7 +109,7 @@ rsync -rvz -e 'ssh -p 2222' --progress local_file_to_copy your_username@localhos
 
 #### jupyterlab conda env
 You can also use your own conda environment, so that you can install any conda/pip/R packages directly in the environment.
-Create a new new minimal environment with (or use `minimal_conda_env.txt`) :
+Create a new minimal environment with (or use `minimal_conda_env.txt`) :
 ```
 conda create --prefix /lustre/path_to_your_new_env/jupyterlab_env -c conda-forge jupyterlab
 ```
