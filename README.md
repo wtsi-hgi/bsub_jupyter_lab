@@ -24,7 +24,7 @@ git clone https://github.com/wtsi-hgi/bsub_jupyter_lab.git && cd bsub_jupyter_la
   
 there are also 2 optional arguments
 * `-d` /lustre/path_to_notebook_dir (to set notebook's browser directory)
-* `-e` /lustre/path_to_conda_env (to use your own jupyter lab conda env, see instructions below to create)
+* `-e` /lustre/path_to_conda_env (to use your own jupyter lab conda env, see  [instructions below](#jupyterlab-conda-env) to create)
 
 The address:port and token of the server will be given in file `jupyter_lab.log` (created in current directory).
 That is, wait until you see a line like the following in `jupyter_lab.log` , and paste address in your browser:
