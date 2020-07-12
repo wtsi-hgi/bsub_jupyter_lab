@@ -55,7 +55,9 @@ library(your_library_name)
 
 ```
 # set local/personal libs directory, e.g.:
-local_libs = '/nfs/users/nfs_g/gn5/personal_rlibs' # set to your project or home dir
+R_version = paste0(as.character(R.version['major']),
+       '.', as.character(R.version['minor']))
+local_libs = paste0('~/personal_rlibs_R_',R_version) # can be changed to any new dir in your home dir or project area
 
 # create directory if doesn't exist already:
 dir.create(local_libs, showWarnings = FALSE)
