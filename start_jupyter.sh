@@ -46,4 +46,11 @@ jupyter --paths
 echo starting jupyter lab server...
 HOST_NAME=$(hostname)
 echo Tunnelling SSH command: ssh -L $PORT:$HOST_NAME.internal.sanger.ac.uk:$PORT ${USER}@ssh.sanger.ac.uk >> jupyter_lab.log
+
+echo set proxys via environemnt variables for R: http_proxy, https_proxy, HTTP_PROXY, HTTPS_PROXY
+export http_proxy=http://wwwcache.sanger.ac.uk:3128                                                                            
+export https_proxy=http://wwwcache.sanger.ac.uk:3128                                                                           
+export HTTP_PROXY=http://wwwcache.sanger.ac.uk:3128                                                                            
+export HTTPS_PROXY=http://wwwcache.sanger.ac.uk:3128 
+
 jupyter lab --notebook-dir=$notebookdir --port=$PORT --ip=0.0.0.0 >> jupyter_lab.log 2>&1
