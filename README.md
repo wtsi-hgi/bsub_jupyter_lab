@@ -65,7 +65,7 @@ dir.create(local_libs, showWarnings = FALSE)
 .libPaths(local_libs)
 # Install BiocManager if not done already:
 if (!requireNamespace("BiocManager", quietly = TRUE))
-    install.packages("BiocManager", lib=local_libs)
+    install.packages("BiocManager", lib=local_libs, repos='http://cran.us.r-project.org')
 BiocManager::install(lib=local_libs)
 
 # now R is ready to install packages in local_libs
@@ -73,7 +73,7 @@ BiocManager::install(lib=local_libs)
 BiocManager::install('purrr', lib=local_libs)
 
 # example install of a package in local_libs directory without Bioconductor:
-install.packages("anocva", lib=local_libs)
+install.packages("anocva", lib=local_libs, repos='http://cran.us.r-project.org')
 
 # test that libraries are there and loaded correctly
 library(purrr)
