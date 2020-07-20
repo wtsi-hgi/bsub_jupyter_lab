@@ -1,0 +1,11 @@
+{
+ "display_name": "Python 2.7.15", 
+ "language": "python", 
+ "argv": [
+  "/software/hgi/installs/anaconda3/envs/genestackpy2/bin/python", 
+  "-m", 
+  "ipykernel_launcher", 
+  "-f", 
+  "{connection_file}"
+ ]
+}
