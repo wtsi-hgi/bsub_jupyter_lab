@@ -48,3 +48,4 @@ bsub -G ${lsf_group} \
 echo waiting for LSF job to start... >> jupyter_lab.log
 echo finished bsub
 echo see file jupyter_lab.log for jupyterhub IP address and port
+tail -f jupyter_lab.log
