@@ -45,7 +45,7 @@ echo jupyter config paths are:
 jupyter --paths
 echo starting jupyter lab server...
 HOST_NAME=$(hostname)
-echo Tunnelling SSH command: ssh -L $PORT:$HOST_NAME.internal.sanger.ac.uk:$PORT ${USER}@ssh.sanger.ac.uk >> jupyter_lab.log
+echo "Tunnelling SSH command: ssh -o \"ServerAliveInterval 60\" -o \"ServerAliveCountMax 1200\" -L $PORT:$HOST_NAME.internal.sanger.ac.uk:$PORT ${USER}@ssh.sanger.ac.uk" >> jupyter_lab.log
 
 echo set proxys via environemnt variables for R: http_proxy, https_proxy, HTTP_PROXY, HTTPS_PROXY
 export http_proxy=http://wwwcache.sanger.ac.uk:3128                                                                            
