@@ -6,7 +6,7 @@ This page has several sections:
 - [How to install your own R libraries in your project or home dir](#How-to-install-your-own-libraries-in-your-project-or-home-dir)
 - [How to use your own python libraries](#python-libraries)
 - [How to set up a personal jupyter lab conda environment](#jupyterlab-conda-env)
-- [How to set up a personal jupyter lab conda environment with your own R kernel](#jupyterlab-conda-env-rkernel)
+- [How to set up a personal jupyter lab conda environment with your own R kernel](#jupyterlab-conda-env-r-kernel)
 - [How to copy data to/from personal computer to Sanger /lustre without VPN](#How-to-copy-data-to-or-from-personal-computer-to-Sanger-lustre-without-VPN)
 - [How to activate hgi conda on farm5](#activate-hgi-conda-on-farm5)
 
@@ -131,7 +131,7 @@ export INSTALL_DIR=/lustre/scratch118/humgen/hgi/users/mercury/test
 cd $INSTALL_DIR
 git clone https://github.com/wtsi-hgi/bsub_jupyter_lab.git
  
-# now, install your own jupyterlab condo environment also in INSTALL_DIR:
+# now, install your own jupyterlab conda environment, also in INSTALL_DIR:
 conda create --prefix $INSTALL_DIR/jupyterlab_env -c conda-forge jupyterlab
  
 # check that environment can be loaded ok:
