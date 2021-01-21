@@ -142,10 +142,10 @@ conda activate $INSTALL_DIR/jupyterlab_env
 conda install -c conda-forge r-base # this should instal R version 4 (let me know if you wanted a different version here).
 # next add R kernel and tell jupyter lab configuration about it:
 # check which R will be used by default
-Which R # in my case it will say “/lustre/scratch118/humgen/hgi/users/mercury/test/jupyterlab_env/bin/R” which is good because I want it to be in from my INSTALL_DIR
+which R # in my case it will say “/lustre/scratch118/humgen/hgi/users/mercury/test/jupyterlab_env/bin/R” which is good because I want it to be in from my INSTALL_DIR
 # go into R
 R
-# check that R default library path is my INSTALL_DIR
+# check that R default library path is in INSTALL_DIR
 .libPaths() # in my case it will say [1] "/lustre/scratch118/humgen/hgi/users/mercury/test/jupyterlab_env/lib/R/library"
 # now install the IRkernel package in that default location
 install.packages('IRkernel')
@@ -159,13 +159,13 @@ cp -r ~/.local/share/jupyter/kernels/ir $INSTALL_DIR/bsub_jupyter_lab/kernels/
 # check that you can use your new conda env via jupyter notebook, and that it sees your personal R kernel:
 cd bsub_jupyter_lab
 ./bsub_jupyter_lab.sh -g hgi -c 4 -m 50000 -q normal -e $INSTALL_DIR/jupyterlab_env
-# notice I used the -e option, and please replace -g with our own lsf group (not ‘hgi’).
-# open your browser to the jupyter lab URL, check that you see R kernel 'Rperso'
+# notice I used the -e option, and please replace -g with our own farm5 LSF group (not ‘hgi’).
+# open your browser to the jupyter lab URL, and check that you see R kernel 'Rperso'
  
 # You should see the “Rperso” kernel available in the list of kernels, and R command .libPaths() should point to the R library path in your new conda env.
  
 # now you can install any other library in your environment!
-# also, if you need rstudio shortcuts, you will need: jupyter labextension install @techrah/text-shortcuts  # for RStudio’s shortcuts
+# also, if you need rstudio shortcuts, you will need: jupyter labextension install @techrah/text-shortcuts
 ```
 
 #### activate hgi conda on farm5
