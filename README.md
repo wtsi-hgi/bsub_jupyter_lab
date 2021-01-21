@@ -6,6 +6,7 @@ This page has several sections:
 - [How to install your own R libraries in your project or home dir](#How-to-install-your-own-libraries-in-your-project-or-home-dir)
 - [How to use your own python libraries](#python-libraries)
 - [How to set up a personal jupyter lab conda environment](#jupyterlab-conda-env)
+- [How to set up a personal jupyter lab conda environment with your own R kernel](#jupyterlab-conda-env-rkernel)
 - [How to copy data to/from personal computer to Sanger /lustre without VPN](#How-to-copy-data-to-or-from-personal-computer-to-Sanger-lustre-without-VPN)
 - [How to activate hgi conda on farm5](#activate-hgi-conda-on-farm5)
 
@@ -116,6 +117,56 @@ Create a new minimal environment with (or use `minimal_conda_env.txt`) :
 conda create --prefix /lustre/path_to_your_new_env/jupyterlab_env -c conda-forge jupyterlab
 ```
 and use optional argument `-e`of script `./bsub_jupyter_lab.sh` to reference it.
+
+#### jupyterlab conda env R kernel
+You can also use your own conda environment + your own R kernel (that will use R from the new conda env):
+```
+ 
+# full setup of your own Jupiter lab + R kernel environment:
+ 
+# choose a path you have access to (/lustre/somewhere or preferably /software/somewhere if you can):
+export INSTALL_DIR=/lustre/scratch118/humgen/hgi/users/mercury/test
+ 
+# first, clone jupyter repo in INSTALL_DIR (this is important later on to setup the new R kernel config):
+cd $INSTALL_DIR
+git clone https://github.com/wtsi-hgi/bsub_jupyter_lab.git
+ 
+# now, install your own jupyterlab condo environment also in INSTALL_DIR:
+conda create --prefix $INSTALL_DIR/jupyterlab_env -c conda-forge jupyterlab
+ 
+# check that environment can be loaded ok:
+conda activate $INSTALL_DIR/jupyterlab_env
+ 
+#  now, you need to add your own R jupyter kernel in that new conda env:
+# first, add R to the conda env:
+conda install -c conda-forge r-base # this should instal R version 4 (let me know if you wanted a different version here).
+# next add R kernel and tell jupyter lab configuration about it:
+# check which R will be used by default
+Which R # in my case it will say “/lustre/scratch118/humgen/hgi/users/mercury/test/jupyterlab_env/bin/R” which is good because I want it to be in from my INSTALL_DIR
+# go into R
+R
+# check that R default library path is my INSTALL_DIR
+.libPaths() # in my case it will say [1] "/lustre/scratch118/humgen/hgi/users/mercury/test/jupyterlab_env/lib/R/library"
+# now install the IRkernel package in that default location
+install.packages('IRkernel')
+IRkernel::installspec(displayname = 'Rperso')  # to register the kernel in the current R installation
+# That command will install the R kernel in your home dir
+# in my case, it said [InstallKernelSpec] Installed kernelspec ir in /nfs/users/nfs_m/mercury/.local/share/jupyter/kernels/ir
+ 
+# now exit R, and copy that kernel config from your home directory to the bsub_jupyter_lab directory you just cloned:
+cp -r ~/.local/share/jupyter/kernels/ir $INSTALL_DIR/bsub_jupyter_lab/kernels/
+ 
+# check that you can use your new conda env via jupyter notebook, and that it sees your personal R kernel:
+cd bsub_jupyter_lab
+./bsub_jupyter_lab.sh -g hgi -c 4 -m 50000 -q normal -e $INSTALL_DIR/jupyterlab_env
+# notice I used the -e option, and please replace -g with our own lsf group (not ‘hgi’).
+# open your browser to the jupyter lab URL, check that you see R kernel 'Rperso'
+ 
+# You should see the “Rperso” kernel available in the list of kernels, and R command .libPaths() should point to the R library path in your new conda env.
+ 
+# now you can install any other library in your environment!
+# also, if you need rstudio shortcuts, you will need: jupyter labextension install @techrah/text-shortcuts  # for RStudio’s shortcuts
+```
 
 #### activate hgi conda on farm5
 ```
