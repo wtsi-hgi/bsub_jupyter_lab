@@ -1,5 +1,5 @@
 {
   "argv": ["/lustre/scratch118/humgen/resources/conda_envs/R.4/bin/R", "--slave", "-e", ".libPaths('/lustre/scratch118/humgen/resources/conda_envs/R.4/lib/R/library');IRkernel::main()", "--args", "{connection_file}"],
-  "display_name": "R 4.0.0",
+  "display_name": "R 4.0.3",
   "language": "R"
 }
