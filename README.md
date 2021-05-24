@@ -45,6 +45,10 @@ which forwards port 53074 on node-10-4-1 to port 53074 on your localhost, jumpin
 `http://127.0.0.1:53074/?token=ea9bba78eb0840154b45acfc90dc9395e66c8d6fbcb2d4be`).
 
 #### R libraries
+
+HGI R doc:
+https://confluence.sanger.ac.uk/display/HGI/Software+on+the+Farm#SoftwareontheFarm-R
+
 2 R versions are currently available in the notebook: R 3.6.1 and R 4.0.0 .  
 You can add your own installed libraries (must be compatible with either R 3.6.1 or R 4.0.0) in an R notebook:
 ```
