@@ -1,0 +1,5 @@
+{
+  "argv": ["/software/R-3.6.1/bin/R", "--slave", "-e", ".libPaths('');IRkernel::main()", "--args", "{connection_file}"],
+  "display_name": "R-3.6.1 /software/R-3.6.1/bin/R",
+  "language": "R"
+}
